@@ -10,20 +10,19 @@ body{
 }
 
 main{
-    width: 100%;
-    height: 100vh;
-    background-color: #010510;
+    width: 100;
 }
+
 header{
-    background-image: url('./img/Frame\ 1.png');
-    height: 100vh;
+    background-image: url('./img/frame2.png');
     width: 100%;
+    height: 100vh;
     display: flex;
     position: relative;
 }
 
-section{
-    background-color: #010510;
+.produtos{
+    background: linear-gradient(to right,#5a7dfd, #6D9DFF, #8BB6FF, #84CEFF);
 }
 
 #carrosel{
@@ -33,14 +32,37 @@ section{
     position: absolute;
     top: 80vh;
     display: flex;
-    gap: 3vh;
+    gap: 10vh;
     justify-content: center;
+    background-color: transparent;
 }
 
-.card{
-    background: linear-gradient(150deg, #565479, #16182C);
-    border: 1px solid #615f86;
-    border-radius: 2vh;
+.card {
+    background: linear-gradient(to right,#5a7dfd, #84CEFF);
+    border-radius: 2.3vh;
     width: 20vh;
     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: clip-path 0.5s ease;
+    clip-path: inset(0 0 0 0);
 }
+
+.card div {
+    background: #ffffff;
+    border-radius: 2vh;
+    width: 19.5vh;
+    height: 19.5vh;
+    transition: 0.1s ease, opacity 0.3s ease;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.card div:hover {
+    opacity: 0;
+}
+
+
+
