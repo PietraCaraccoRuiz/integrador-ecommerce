@@ -10,15 +10,27 @@ body{
 }
 
 main{
-    width: 100;
+    background: linear-gradient(-10deg, rgba(17, 19, 32, 1), rgba(46, 46, 73, 1));
+    background-color: rgba(17, 19, 32, 1);
+    width: 100%;
+    position: relative;
+}
+
+header figure {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Ajusta a imagem */
+header figure img {
+    width: 60vh;
+    display: block;
 }
 
 header{
-    background-image: url('./img/frame2.png');
-    width: 100%;
+    width: 100vh;
     height: 100vh;
-    display: flex;
-    position: relative;
 }
 
 .produtos{
@@ -38,31 +50,23 @@ header{
 }
 
 .card {
-    background: linear-gradient(to right,#5a7dfd, #84CEFF);
-    border-radius: 2.3vh;
-    width: 20vh;
-    height: 20vh;
+    background: linear-gradient(to right,#cdd8ff6c, #b0acc04b);
+    border-radius: 2.4vh;
+    width: 19.5vh;
+    height: 19.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    transition: clip-path 0.5s ease;
-    clip-path: inset(0 0 0 0);
 }
 
 .card div {
-    background: #ffffff;
-    border-radius: 2vh;
-    width: 19.5vh;
-    height: 19.5vh;
-    transition: 0.1s ease, opacity 0.3s ease;
-    opacity: 1;
-    overflow: hidden;
+    background: rgba(17, 19, 32, 1);
+    border-radius: 2.5vh;
+    width: 19.2vh;
+    height: 19.2vh;
+    transition: all 1s;
 }
 
 .card div:hover {
-    opacity: 0;
+    background: linear-gradient(to right,#576DFF, #84CEFF);
 }
-
-
-
