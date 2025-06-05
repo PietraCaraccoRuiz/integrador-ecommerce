@@ -403,8 +403,8 @@ input[type="radio"] {
 
 label span {
     display: inline-block;
-    width: 3vh;
-    height: 3vh;
+    width: 2vh;
+    height: 2vh;
     border: 0.2vh solid #d2d9e6;
     border-radius: 0.2vh;
     margin-right: 3vh;
@@ -414,8 +414,8 @@ label span {
 
 input[type="radio"]:hover + span::before {
     content: '';
-    width: 1.2vh;
-    height: 1.2vh;
+    width: 1vh;
+    height: 1vh;
     border-radius: 0.2vh;
     background-color: #d2d9e6;
     position: absolute;
@@ -430,8 +430,8 @@ input[type="radio"]:checked + span{
 
 input[type="radio"]:checked + span::after {
     content: '';
-    width: 1.5vh;
-    height: 1.5vh;
+    width: 1vh;
+    height: 1vh;
     border-radius: 0.2vh;
     background-color: #3d3e41;
     position: absolute;
@@ -462,10 +462,89 @@ aside div {
 }
 
 .produtos-container {
-    background-color: red;
     display: flex;
+    width: fit-content;
+    height: fit-content;
+    gap: 4vh;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+    padding: 3vh;
+    border-radius: 2vh;
+    box-shadow: 0 0 3.5vh rgba(115, 115, 115, 0.432);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.card div:first-child {
+    background-color: #D0D5DD;
+    box-shadow: 0 0 2vh rgba(115, 115, 115, 0.432);
+    width: 25vh;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vh;
 }
 
 .card img {
-    width: 30vh;
+    width: 25vh;
+}
+
+.card span{
+    color: #98A2B3;
+    text-decoration: line-through;
+    margin-right: 1vh;
+}
+
+div {
+    display: flex;
+    gap: 1vh;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1vh;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.radio-group label.color1 {
+    background-color: rgb(28, 33, 104);
+}
+
+.radio-group label.color2 {
+    background-color: rgb(125, 202, 176);
+}
+
+.radio-group label.color3 {
+    background-color: rgb(0, 0, 0);
+}
+
+.radio-group label:hover {
+    box-shadow: 0 0 1vh #3d3e41;
+}
+
+.radio-group label:has(input[type="radio"]:checked) {
+    border-color: transparent; /* para não conflitar */
+    outline: 0.3vh solid #000;
+    outline-offset: 0.5vh;
+    box-shadow: 0 0 5px #000;
 }
